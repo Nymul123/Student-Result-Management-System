@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".activity.StudentMarkSheetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/studentMarkSheetTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="30dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_28" />
+
+        <TableLayout
+            android:id="@+id/studentMarkSheetTable"
+            style="@style/CustomStyle.Table.Simple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/rounded_shape"
+            android:padding="10dp">
+
+            <TableRow style="@style/CustomStyle.Table.Simple.SimpleRow">
+
+                <TextView
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/code"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_18" />
+
+                <TextView
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/course"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_18" />
+
+                <TextView
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:layout_width="60dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/gpa"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_18" />
+
+                <TextView
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:layout_width="60dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/grade"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_18" />
+            </TableRow>
+        </TableLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/studentMarkSheetPrintButton"
+            style="@style/CustomStyle.Button.Blue"
+            android:layout_gravity="center"
+            android:layout_marginVertical="30dp"
+            android:text="@string/save"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</ScrollView>

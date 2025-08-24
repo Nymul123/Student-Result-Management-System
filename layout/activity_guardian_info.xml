@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".activity.StudentInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="30dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/guardianInfoLogoutButton"
+                style="@style/CustomStyle.Button.Blue"
+                android:text="@string/logout"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/guardianInfoProfileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CircleImageShape" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/student_info"
+            android:textSize="@dimen/text_28" />
+
+        <LinearLayout
+            android:id="@+id/guardianInfoStudentInfoLayout"
+            style="@style/CustomStyle.Table.Simple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/rounded_shape"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/guardianInfoStudentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/guardianInfoStudentDept"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_16" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/GuardianStudentInfoButton"
+                style="@style/CustomStyle.Button"
+                android:layout_width="70dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/info"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/GuardianStudentResultButton"
+                style="@style/CustomStyle.Button"
+                android:layout_width="80dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/result"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/guardian_info"
+            android:textSize="@dimen/text_28" />
+
+        <TableLayout
+            style="@style/CustomStyle.Table.Simple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/rounded_shape"
+            android:padding="10dp">
+
+            <TableRow
+                style="@style/CustomStyle.Table.Simple.SimpleRow"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:id="@+id/guardianInfoName"
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                style="@style/CustomStyle.Table.Simple.SimpleRow"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:text="@string/relation" />
+
+                <TextView
+                    android:id="@+id/guardianInfoRelation"
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                style="@style/CustomStyle.Table.Simple.SimpleRow"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:text="@string/contact" />
+
+                <TextView
+                    android:id="@+id/guardianInfoContact"
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                style="@style/CustomStyle.Table.Simple.SimpleRow"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:text="@string/email" />
+
+                <TextView
+                    android:id="@+id/guardianInfoEmail"
+                    style="@style/CustomStyle.Table.Simple.SimpleRowText"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
